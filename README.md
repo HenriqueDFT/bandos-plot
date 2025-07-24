@@ -1,4 +1,33 @@
 # BANDOS-PLOT
+import tkinter as tk
+from PIL import Image, ImageTk
+
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("BANDOS-PLOT")
+        self.geometry("800x600")
+        self.configure(bg="white")
+
+        # Carregar imagem da UFPI
+        try:
+            ufpi_img = Image.open("ufpi.png")
+            ufpi_img = ufpi_img.resize((100, 100))  # Redimensiona
+            self.ufpi_photo = ImageTk.PhotoImage(ufpi_img)
+
+            # Inserir imagem no topo
+            label_ufpi = tk.Label(self, image=self.ufpi_photo, bg="white")
+            label_ufpi.pack(pady=10)
+        except Exception as e:
+            print(f"Erro ao carregar imagem da UFPI: {e}")
+
+        # Texto de boas-vindas
+        tk.Label(self, text="BANDOS-PLOT", font=("Arial", 20), bg="white").pack()
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
+
 
 ## 🚀 Sobre o Projeto
 
@@ -115,6 +144,11 @@ Instituição: Grupo de Nanofísica Computacional (GNC) – UFPI
 🔗 Conheça o GNC
 
 Escaneie o QR Code incluído na interface do programa para saber mais sobre o Grupo de Nanofísica Computacional.
+
+
+
+
+
 ⚖️ Licença
 
 Distribuído sob a licença MIT.
