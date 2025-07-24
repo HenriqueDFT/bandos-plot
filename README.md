@@ -1,108 +1,131 @@
-# bandos-plot.py 
+# BANDOS-PLOT
 
+## 🚀 Sobre o Projeto
+
+O **BANDOS-PLOT** é um programa desenvolvido em Python para a visualização e análise de estruturas de bandas eletrônicas e densidade de estados (DOS).  
+Ele foi criado para facilitar o pós-processamento de dados obtidos de cálculos de Estrutura Eletrônica por Teoria do Funcional da Densidade (DFT), especialmente aqueles gerados por pacotes como o **SIESTA**.
+
+A principal funcionalidade do BANDOS-PLOT é gerar gráficos combinados de bandas eletrônicas e DOS, com:
+- Marcação automática dos pontos de alta simetria na primeira zona de Brillouin;
+- Ajuste ao nível de Fermi;
+- Autoescala dos gráficos para facilitar a impressão e divulgação científica.
+
+---
+
+## ✨ Recursos Principais
+
+- **Plotagem Combinada**: Bandas eletrônicas e DOS lado a lado.
+- **Identificação de Pontos de Alta Simetria**: Marcação automática dos símbolos (e.g., `Γ`, `K`, `M`, `X`) no eixo k.
+- **Nível de Fermi**: Ajuste e marcação automática de \( E_F = 0 \).
+- **Customização de Cores**: Cores personalizáveis diretamente na interface.
+- **Seleção de Intervalo de Energia**: Defina os limites do eixo Y para foco em regiões específicas.
+- **Interface Gráfica Intuitiva (GUI)**: Desenvolvido com `tkinter`.
+- **Exportação de Gráficos**: Salva em PNG e PDF com alta qualidade.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Python 3.x**
+- [`matplotlib`](https://matplotlib.org/) — geração de gráficos científicos
+- [`tkinter`](https://docs.python.org/3/library/tkinter.html) — construção da interface gráfica
+- [`Pillow`](https://python-pillow.org/) — carregamento e redimensionamento de imagens
+- [`re`](https://docs.python.org/3/library/re.html) — extração de dados com expressões regulares
+
+---
+
+## ⚙️ Como Usar
+
+### ✅ Pré-requisitos
+
+Certifique-se de ter o Python 3.x instalado.  
+Instale as dependências necessárias com o comando:
+
+```bash
 pip install -r requirements.txt
 
-BANDOS-PLOT
-🚀 Sobre o Projeto
-
-O BANDOS-PLOT é um programa desenvolvido em Python para a visualização e análise de estruturas de bandas eletrônicas e densidade de estados (DOS). Ele foi criado para facilitar o pós-processamento de dados obtidos de cálculos de Estrutura Eletrônica por Teoria do Funcional da Densidade (DFT), especialmente aqueles gerados por pacotes como o SIESTA.
-
-A principal funcionalidade do BANDOS-PLOT é gerar gráficos combinados de bandas eletrônicas e DOS, com a marcação automática dos pontos de alta simetria na primeira zona de Brillouin e o ajuste ao nível de Fermi. Isso otimiza a análise e a apresentação de resultados científicos, além da auto escala dos gráficos com objetivo ja imprimir os gráficos otimizando a divulgação.
-✨ Recursos Principais
-
-    Plotagem Combinada: Geração de gráficos de Estrutura de Bandas e Densidade de Estados (DOS) lado a lado.
-
-    Identificação de Pontos de Alta Simetria: Marcação automática e correta dos símbolos dos pontos de alta simetria (e.g., mathbfGamma, mathbfK, mathbfM, mathbfX) no eixo k.
-
-    Nível de Fermi: Ajuste automático e marcação do nível de Fermi (E_F=0) para ambos os gráficos.
-
-    Customização de Cores: Opções para alterar as cores das bandas e do DOS diretamente na interface.
-
-    Seleção de Intervalo de Energia: Controle dos limites de energia (eixo Y) para focar em regiões específicas do espectro.
-
-    Interface Gráfica Intuitiva (GUI): Desenvolvido com tkinter para uma experiência de usuário amigável.
-
-    Exportação de Gráficos: Salva os gráficos gerados em formatos de alta qualidade (PNG, PDF).
-
-🛠️ Tecnologias Utilizadas
-
-    Python 3.x
-
-    matplotlib: Para a geração dos gráficos científicos.
-
-    tkinter: Para a construção da interface gráfica do usuário.
-
-    Pillow (PIL Fork): Para o carregamento e redimensionamento de imagens (logos).
-
-    re (Regular Expressions): Para a extração de dados de arquivos de entrada.
-
-⚙️ Como Usar
-Pré-requisitos
-
-Certifique-se de ter o Python 3.x instalado em seu sistema. Você também precisará instalar as bibliotecas necessárias:
+Ou, manualmente:
 
 pip install matplotlib pillow
 
-Executando o Programa
+▶️ Executando o Programa
 
     Baixe ou clone este repositório:
 
-    git clone https://github.com/seu-usuario/BANDOS-PLOT.git
-    cd BANDOS-PLOT
+git clone https://github.com/seu-usuario/BANDOS-PLOT.git
+cd BANDOS-PLOT
 
-    Certifique-se de que os arquivos de logo e QR code estão na mesma pasta do script principal:
+    Certifique-se de que os arquivos de logo e QR code estejam na mesma pasta do script principal:
 
-        gnc(1).png
-
-        ufpi.png
-
-        qr(1)(1).png
+gnc(1).png
+ufpi.png
+qr(1)(1).png
 
     Execute o script principal:
 
-    python seu_script_principal.py
+python seu_script_principal.py
 
-    (Substitua seu_script_principal.py pelo nome do arquivo Python que contém a classe App e o if __name__ == "__main__":.)
+    Substitua seu_script_principal.py pelo nome do arquivo que contém a classe App e o trecho if __name__ == "__main__".
 
-Fluxo de Uso
+🧭 Fluxo de Uso
 
     Selecione os Arquivos:
 
-        Arquivo .bands: Contém o nível de Fermi e as coordenadas dos pontos de alta simetria.
+        *.bands → contém o nível de Fermi e os pontos de alta simetria
 
-        Arquivo bands.dat: Contém os dados de energia da estrutura de bandas.
+        bands.dat → contém os dados da estrutura de bandas
 
-        Arquivo dos.dat: Contém os dados de densidade de estados.
+        dos.dat → contém os dados da densidade de estados
 
-    Defina o Intervalo de Energia: Insira os valores mínimo e máximo para o eixo Y dos gráficos (opcional).
+    Defina o Intervalo de Energia (opcional)
 
-    Clique em "Gerar Gráfico": Uma nova janela será aberta exibindo os gráficos combinados.
+    Clique em "Gerar Gráfico":
+    Uma nova janela abrirá com os gráficos combinados.
 
-    Personalize e Salve: Na janela do gráfico, você pode alterar as cores e salvar a imagem em diferentes formatos.
+    Personalize e Salve:
+    Altere as cores, exporte em PNG ou PDF conforme necessário.
 
 📚 Arquivos de Exemplo
 
-Para testar o programa, você precisará de arquivos de dados no formato esperado. Exemplos típicos são gerados por cálculos DFT (como os do Quantum ESPRESSO). Os arquivos .bands, bands.dat e dos.dat devem seguir uma estrutura específica para serem lidos corretamente pelo programa.
+Os arquivos devem seguir a estrutura padrão de saída dos códigos DFT (como SIESTA ou Quantum ESPRESSO):
 
-    *.bands: A primeira linha deve conter o nível de Fermi. As linhas seguintes, após um número inteiro que indica a quantidade de pontos, devem conter as coordenadas k e os rótulos dos pontos de alta simetria.
+    *.bands:
 
-    bands.dat: Arquivo de duas colunas (coordenada k, energia da banda).
+        Primeira linha: nível de Fermi (float)
 
-    dos.dat: Arquivo de duas colunas (energia, densidade de estados).
+        Últimas 4 linhas: coordenadas k e os rótulos dos pontos de alta simetria
+
+    bands.dat:
+    Arquivo de duas colunas → (coordenada k, energia)
+
+    dos.dat:
+    Arquivo de duas colunas → (energia, densidade de estados)
 
 📝 Atribuição e Contato
 
-Este software foi desenvolvido por Henrique Lago, físico formado pela Universidade Federal do Piauí (UFPI), durante sua Iniciação Científica Voluntária.
+Este software foi desenvolvido por:
 
-Orientador: Professor Dr. Ramon Sampaio Ferreira
+Henrique Lago
+Bacharel em Física pela Universidade Federal do Piauí (UFPI)
+Durante sua Iniciação Científica Voluntária.
 
-Instituição: Grupo de Nanofísica Computacional (GNC), Universidade Federal do Piauí (UFPI).
-
-Entre em contato: henrique.liberato@ufpi.edu.br
+Orientador: Prof. Dr. Ramon Sampaio Ferreira
+Instituição: Grupo de Nanofísica Computacional (GNC) – UFPI
+📧 Email: henrique.liberato@ufpi.edu.br
 🔗 Conheça o GNC
 
-Escaneie o QR Code abaixo para saber mais sobre o Grupo de Nanofísica Computacional:
+Escaneie o QR Code incluído na interface do programa para saber mais sobre o Grupo de Nanofísica Computacional.
 ⚖️ Licença
+
+Distribuído sob a licença MIT.
+Veja o arquivo LICENSE para mais informações.
+
+
+---
+
+Se quiser, posso também criar a versão `.md` salva como arquivo para você ou gerar uma visualização estilizada. Deseja que eu envie o arquivo pronto para download?
+
+
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
 🤝 Contribuições
