@@ -52,7 +52,7 @@ pip install matplotlib pillow
 
     Baixe ou clone este repositório:
 
-git clone https://github.com/seu-usuario/BANDOS-PLOT.git
+git clone https://github.com/HenriqueDFT/BANDOS-PLOT.git
 cd BANDOS-PLOT
 
     Certifique-se de que os arquivos de logo e QR code estejam na mesma pasta do script principal:
