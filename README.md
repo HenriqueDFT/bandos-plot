@@ -67,7 +67,7 @@ bandos-plot.py
 
     Substitua bandos-plot.py pelo nome do arquivo que contém a classe App e o trecho if __name__ == "__main__".
 
-🧭 Fluxo de Uso
+# 🧭 Fluxo de Uso
 
     Selecione os Arquivos:
 
@@ -85,7 +85,7 @@ bandos-plot.py
     Personalize e Salve:
     Altere as cores, exporte em PNG ou PDF conforme necessário.
 
-📚 Arquivos de Exemplo
+#  📚 Arquivos de Exemplo
 
 Os arquivos devem seguir a estrutura padrão de saída dos códigos DFT (como SIESTA ou Quantum ESPRESSO):
 
@@ -101,7 +101,7 @@ Os arquivos devem seguir a estrutura padrão de saída dos códigos DFT (como SI
     dos.dat:
     Arquivo de duas colunas → (energia, densidade de estados)
 
-📝 Atribuição e Contato
+# 📝 Atribuição e Contato
 
 Este software foi desenvolvido por:
 
@@ -111,8 +111,8 @@ Durante sua Iniciação Científica Voluntária.
 
 Orientador: Prof. Dr. Ramon Sampaio Ferreira
 Instituição: Grupo de Nanofísica Computacional (GNC) – UFPI
-📧 Email: henrique.liberato@ufpi.edu.br
-🔗 Conheça o GNC
+### 📧 Email: henrique.liberato@ufpi.edu.br
+## 🔗 Conheça o GNC
 
 Escaneie o QR Code incluído na interface do programa para saber mais sobre o Grupo de Nanofísica Computacional.
 
@@ -120,7 +120,7 @@ Escaneie o QR Code incluído na interface do programa para saber mais sobre o Gr
 
 
 
-⚖️ Licença
+# ⚖️ Licença
 
 Distribuído sob a licença MIT.
 Veja o arquivo LICENSE para mais informações.
