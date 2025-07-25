@@ -128,12 +128,8 @@ Veja o arquivo LICENSE para mais informações.
 
 ---
 
-Se quiser, posso também criar a versão `.md` salva como arquivo para você ou gerar uma visualização estilizada. Deseja que eu envie o arquivo pronto para download?
 
-
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
-🤝 Contribuições
+## 🤝 Contribuições
 
 Contribuições são bem-vindas! Se você tiver sugestões, relatar bugs ou quiser adicionar novos recursos, por favor, abra uma issue ou envie um pull request.
 
