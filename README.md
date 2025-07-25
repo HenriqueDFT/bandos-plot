@@ -63,9 +63,9 @@ qr(1)(1).png
 
     Execute o script principal:
 
-python seu_script_principal.py
+bandos-plot.py
 
-    Substitua seu_script_principal.py pelo nome do arquivo que contém a classe App e o trecho if __name__ == "__main__".
+    Substitua bandos-plot.py pelo nome do arquivo que contém a classe App e o trecho if __name__ == "__main__".
 
 🧭 Fluxo de Uso
 
