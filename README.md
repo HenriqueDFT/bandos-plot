@@ -41,14 +41,14 @@ A principal funcionalidade do BANDOS-PLOT é gerar gráficos combinados de banda
 Certifique-se de ter o Python 3.x instalado.  
 Instale as dependências necessárias com o comando:
 
-```bash
+
 pip install -r requirements.txt
 
 Ou, manualmente:
 
 pip install matplotlib pillow
 
-▶️ Executando o Programa
+## ▶️ Executando o Programa
 
     Baixe ou clone este repositório:
 
@@ -93,7 +93,7 @@ Os arquivos devem seguir a estrutura padrão de saída dos códigos DFT (como SI
 
         Primeira linha: nível de Fermi (float)
 
-        Últimas 4 linhas: coordenadas k e os rótulos dos pontos de alta simetria
+        Últimas  linhas: coordenadas k e os rótulos dos pontos de alta simetria
 
     bands.dat:
     Arquivo de duas colunas → (coordenada k, energia)
@@ -136,3 +136,5 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 🤝 Contribuições
 
 Contribuições são bem-vindas! Se você tiver sugestões, relatar bugs ou quiser adicionar novos recursos, por favor, abra uma issue ou envie um pull request.
+
+```bash
